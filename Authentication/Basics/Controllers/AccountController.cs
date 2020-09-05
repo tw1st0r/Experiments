@@ -4,24 +4,12 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Basics.Controllers
 {
-    public class HomeController : Controller
+    public class AccountController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [Authorize]
-        public IActionResult Secret()
-        {
-            return View();
-        }
-
         public IActionResult Authenticate()
         {
             var claims1 = new List<Claim>()
